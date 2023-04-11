@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<h1>PROGRAMA CALCULAR IMC</h1>
+<h1>PROGRAMA CALULAR PUNTOS DE UN EQUIPO DE FUTBOL</h1>
 
 <script>
 	function saltarlinea(){
@@ -12,16 +12,12 @@
 
 	}
 
-	function calcularImc(peso,altura){
-		return peso/(altura*altura);		
-	}
+	var victorias=parseInt(prompt("Informe la cantidad de victorias"));
+	var empates=parseInt(prompt("Informe la cantidad de empates"));
 
-	nombre=prompt("Ingrese su nombre");
+	var puntosTotal=(victorias * 3) + empates;
 
-	pesoInformado=prompt(nombre+" ingrese peso");
-	altraInformada=prompt(nombre+" ingrese altura");
-	imcCalculado=calcularImc(pesoInformado,altraInformada);
+	imprimir("El total de puntos del equipo es: " + puntosTotal);
 
-	imprimir(nombre+ " su IMC es: "+ imcCalculado);
 
 </script>
