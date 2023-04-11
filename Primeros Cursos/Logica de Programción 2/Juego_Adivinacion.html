@@ -14,16 +14,34 @@
 	}
 
 	var numPensado=Math.round(Math.random()*10);
-	var numLanzado=parseInt(prompt("Ingrese un número entre 0-10"));
+
+	var intentos=3;
+	var contador=1;
+
+	
+	while(contador<=intentos){
+		var numLanzado=parseInt(prompt("Ingrese un número entre 0-10"));
+		if(numPensado == numLanzado){
+
+			alert("Usted acertó, en el intento "+ intentos + " el numero pensado era "+ numPensado);
+			break;
+
+		}else{
+			alert("usted erró");
+		}
+		contador++;
+	}
+
 
 	if(numPensado == numLanzado){
 
-		imprimir("Usted acertó");
+		imprimir("Usted acertó, en el intento "+ intentos + " el numero pensado era "+ numPensado);
+		
 
 	}else{
-		imprimir("usted erró, el número pensado era "+ numPensado);
+		imprimir("Usted erró, el numero pensado era "+ numPensado);
 	}
-
 	
 
+	
 </script>
