@@ -4,20 +4,35 @@
 </canvas>
 <script>
 
-	var pantalla = document.querySelector("canvas");
-	var pincel = pantalla.getContext("2d");
+	
 
 	function dibujarCuadradoVerde(color,x,y){
+		var pantalla = document.querySelector("canvas");
+		var pincel = pantalla.getContext("2d");
 		pincel.fillStyle=color;
 		pincel.fillRect(x,y,50,50);
 		pincel.strokeStyle="black";
 		pincel.strokeRect(x,y,50,50);
 	}
 	
-	dibujarCuadradoVerde("red",0,0);
-	dibujarCuadradoVerde("yellow",0,50);
-	dibujarCuadradoVerde("green",0,100);
+	/*var x=0;
+	while(x<600){
 
-	
+		dibujarCuadradoVerde("red",x,0);
+		dibujarCuadradoVerde("yellow",x,50);
+		dibujarCuadradoVerde("green",x,100);
+		x= x+50;
+
+	}	*/		
+
+	for(var x=0; x<600 ; x=x+50){
+
+		dibujarCuadradoVerde("red",x,0);
+		dibujarCuadradoVerde("yellow",x,50);
+		dibujarCuadradoVerde("green",x,100);
+
+
+	}
+
 
 </script>
